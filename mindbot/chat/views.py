@@ -119,7 +119,7 @@ def chatbot(request):
     device = "Mobile" if ua.is_mobile else "PC"
     browser = ua.browser.family
     os = ua.os.family
-    SearchLog.objects.create( #stores the data )
+    SearchLog.objects.create( )
         session_id=session_id,
         message=user_msg,
         user_ip=ip,
