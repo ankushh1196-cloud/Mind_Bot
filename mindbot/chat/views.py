@@ -238,9 +238,8 @@ Avoid:
     if not output:
         return JsonResponse({"reply": "No response from server."})
 
-    if "error" in output:
-        print("API ERROR:", output["error"])
-        return JsonResponse({"reply": "API error. Check logs."})
+        if "error" in output:
+        return JsonResponse({"reply": str(output["error"])})
 
     if "choices" not in output:
         return JsonResponse({"reply": "Invalid API response."})
