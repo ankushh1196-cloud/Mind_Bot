@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 from django.db.models import Count
 
 
-API_KEY = "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"
+API_KEY = "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"
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 headers = { #for sending API's Key
