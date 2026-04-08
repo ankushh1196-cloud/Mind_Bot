@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <title>MindBot</title>
 
@@ -318,13 +319,11 @@ textarea:focus::placeholder {
 }
 
 .chat-container {
-    width: 540px;
-    height: 720px;
+    width: 100%;
+    max-width: 540px;
+    height: 100vh;
 
     background: linear-gradient(180deg, rgba(17,24,39,0.95), rgba(2,6,23,0.95));
-
-
-
     border-radius: 20px;
 
     display: flex;
@@ -583,6 +582,39 @@ button:active {
         button:hover {
             transform: translateY(-2px) scale(1.03);
         }
+        @media (max-width: 768px) {
+
+    .chat-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    #terminal {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .header {
+        font-size: 15px;
+        padding: 14px;
+    }
+
+    textarea {
+        font-size: 16px; /* prevents zoom on mobile */
+        height: 44px;
+    }
+
+    button {
+        height: 44px;
+    }
+
+    .msg {
+        max-width: 85%;
+        font-size: 14px;
+    }
+}
 
     </style>
 </head>
